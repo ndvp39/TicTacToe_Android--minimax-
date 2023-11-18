@@ -16,3 +16,10 @@ Challenge yourself against a computer opponent with two difficulty levels: Easy 
 - **Mobile Friendly:** Enjoy a responsive and intuitive user interface designed for Android devices.
 
 - ![Alt Text](readme_image0.jpg)
+- ![Alt Text](readme_image1.jpg)
+- ![Alt Text](readme_image2.jpg)
+- ![Alt Text](readme_image3.jpg)
+- ![Alt Text](readme_image_loading.jpg)
+- ![Alt Text](readme_image_win.jpg)
+- ![Alt Text](readme_image_draw.jpg)
+- ![Alt Text](readme_image_lose.jpg)
