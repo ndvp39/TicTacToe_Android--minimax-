@@ -19,14 +19,18 @@ Challenge yourself against a computer opponent with two difficulty levels: Easy 
 
 Welcome to the Android Tic Tac Toe app repository!
 
-<img src="readme_image0.jpg" alt="Alt Text" style="max-width:100%; height:auto;"/>
-<img src="readme_image1.jpg" alt="Alt Text" style="max-width:100%; height:auto;"/>
-<img src="readme_image2.jpg" alt="Alt Text" style="max-width:100%; height:auto;"/>
-<img src="readme_image3.jpg" alt="Alt Text" style="max-width:100%; height:auto;"/>
-<img src="readme_image_loading.jpg" alt="Alt Text" style="max-width:100%; height:auto;"/>
-<img src="readme_image_win.jpg" alt="Alt Text" style="max-width:100%; height:auto;"/>
-<img src="readme_image_draw.jpg" alt="Alt Text" style="max-width:100%; height:auto;"/>
-<img src="readme_image_lose.jpg" alt="Alt Text" style="max-width:100%; height:auto;"/>
+# Tic Tac Toe App
+
+Welcome to the Android Tic Tac Toe app repository!
+
+<img src="readme_image0.jpg" alt="Alt Text" width="400"/>
+<img src="readme_image1.jpg" alt="Alt Text" width="400"/>
+<img src="readme_image2.jpg" alt="Alt Text" width="400"/>
+<img src="readme_image3.jpg" alt="Alt Text" width="400"/>
+<img src="readme_image_loading.jpg" alt="Alt Text" width="400"/>
+<img src="readme_image_win.jpg" alt="Alt Text" width="400"/>
+<img src="readme_image_draw.jpg" alt="Alt Text" width="400"/>
+<img src="readme_image_lose.jpg" alt="Alt Text" width="400"/>
 
 ...
 
