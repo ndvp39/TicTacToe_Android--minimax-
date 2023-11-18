@@ -14,3 +14,5 @@ Challenge yourself against a computer opponent with two difficulty levels: Easy 
 - **Mute/Unmute Option:** Toggle between muting and unmuting the background music based on your preference.
 
 - **Mobile Friendly:** Enjoy a responsive and intuitive user interface designed for Android devices.
+
+- ![Alt Text](readme_image0.png)
