@@ -23,14 +23,14 @@ Welcome to the Android Tic Tac Toe app repository!
 
 Welcome to the Android Tic Tac Toe app repository!
 
-<img src="readme_image0.jpg" alt="Alt Text" width="400"/>
-<img src="readme_image1.jpg" alt="Alt Text" width="400"/>
-<img src="readme_image2.jpg" alt="Alt Text" width="400"/>
-<img src="readme_image3.jpg" alt="Alt Text" width="400"/>
-<img src="readme_image_loading.jpg" alt="Alt Text" width="400"/>
-<img src="readme_image_win.jpg" alt="Alt Text" width="400"/>
-<img src="readme_image_draw.jpg" alt="Alt Text" width="400"/>
-<img src="readme_image_lose.jpg" alt="Alt Text" width="400"/>
+<img src="readme_image0.jpg" alt="Alt Text" width="100"/>
+<img src="readme_image1.jpg" alt="Alt Text" width="300"/>
+<img src="readme_image2.jpg" alt="Alt Text" width="300"/>
+<img src="readme_image3.jpg" alt="Alt Text" width="300"/>
+<img src="readme_image_loading.jpg" alt="Alt Text" width="300"/>
+<img src="readme_image_win.jpg" alt="Alt Text" width="300"/>
+<img src="readme_image_draw.jpg" alt="Alt Text" width="300"/>
+<img src="readme_image_lose.jpg" alt="Alt Text" width="300"/>
 
 ...
 
