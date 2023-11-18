@@ -19,10 +19,6 @@ Challenge yourself against a computer opponent with two difficulty levels: Easy 
 
 Welcome to the Android Tic Tac Toe app repository!
 
-# Tic Tac Toe App
-
-Welcome to the Android Tic Tac Toe app repository!
-
 <img src="readme_image0.jpg" alt="Alt Text" width="100"/>
 <img src="readme_image1.jpg" alt="Alt Text" width="300"/>
 <img src="readme_image2.jpg" alt="Alt Text" width="300"/>
