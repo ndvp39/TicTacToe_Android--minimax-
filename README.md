@@ -17,6 +17,7 @@ Challenge yourself against a computer opponent with two difficulty levels: Easy 
 
 - ![Alt Text](readme_image0.jpg)
 - ![Alt Text](readme_image1.jpg)
+- <img src="screenshots/readme_image1.jpg" alt="Game Screenshot" width="300"/>
 - ![Alt Text](readme_image2.jpg)
 - ![Alt Text](readme_image3.jpg)
 - ![Alt Text](readme_image_loading.jpg)
