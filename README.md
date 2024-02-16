@@ -19,4 +19,8 @@ Welcome to the Android Tic Tac Toe app repository! This mobile application, buil
 
 # Tic Tac Toe App
 
-
+    <td>
+      <p><strong>Player 1- Ravid</strong></p>
+      <img src="https://github.com/ndvp39/TicTacToe_AndroidApp/blob/master/gif_readme.gif" alt="Player 1 1" width="380">
+    </td>
+    <td>
