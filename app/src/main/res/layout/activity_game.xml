@@ -9,6 +9,18 @@
 
 
   <ImageView
+      android:id="@+id/level_image"
+      android:layout_width="160dp"
+      android:layout_height="100dp"
+      android:layout_marginBottom="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:srcCompat="@drawable/easylevel"
+      tools:ignore="MissingConstraints" />
+
+  <ImageView
       android:id="@+id/board_imageview"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

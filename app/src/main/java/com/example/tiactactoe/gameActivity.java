@@ -14,8 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
+import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class gameActivity extends AppCompatActivity {
@@ -24,6 +27,7 @@ public class gameActivity extends AppCompatActivity {
     private String[][] board;
     private ImageView winner_image;
     private ImageView looser_image;
+    private ImageView level_image;
     private Button exitGame_btn;
     private Button playAgain_btn;
     private ImageView draw_image;
@@ -45,10 +49,23 @@ public class gameActivity extends AppCompatActivity {
         // Initialize the touch sound MediaPlayer
         touchSound = MediaPlayer.create(this, R.raw.tapsound);
 
+        level_image = findViewById(R.id.level_image);
+
         // Retrieve the data from the Intent
         Intent intent = getIntent();
         if (intent != null) {
             gameLevel = intent.getStringExtra("gameLevel");
+        }
+
+        // change the photo in the game for the current level
+        if(gameLevel.equals("Easy")){
+            level_image.setImageResource(R.drawable.easylevel);
+        }
+        else if(gameLevel.equals("Hard")){
+            level_image.setImageResource(R.drawable.hardlevel);
+        }
+        else{
+            level_image.setImageResource(R.drawable.extremelevel);
         }
 
         // Initialize UI elements and set their initial visibility
@@ -217,6 +234,11 @@ public class gameActivity extends AppCompatActivity {
                     }
                 }
 
+                // For Extreme mode, using minimax algorithm
+                if (gameLevel.equals("Extreme")) {
+                    randBtn = findBestMove();
+                }
+
                 // Draw "O" on the chosen button
                 drawXO(randBtn, "O");
 
@@ -239,6 +261,89 @@ public class gameActivity extends AppCompatActivity {
             }
         }.start();
     }
+
+    /**
+     * Finds the best move for the computer player (O) using the minimax algorithm.
+     *
+     * @return The button representing the best move.
+     */
+    public Button findBestMove() {
+        float bestVal = Float.NEGATIVE_INFINITY;
+        Button bestMove_button = null;
+
+        // Iterate through the game board to find the best move
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j].equals(" ")) {
+                    // Make a move and evaluate its value using minimax
+                    board[i][j] = "O";
+                    float val = minimax(0, false); // for the best move
+                    board[i][j] = " "; // undo the move
+
+                    // Update the best move if the current move is better
+                    if (val > bestVal) { // taking only the better move (maximizing)
+                        bestMove_button = getPlace("Extreme", i * 3 + j);
+                        bestVal = val;
+                    }
+                }
+            }
+        }
+        return bestMove_button;
+    }
+
+    /**
+     * Minimax algorithm to evaluate the best move for the computer player (O)
+     * or the human player (X).
+     *
+     * @param root          The depth of the minimax tree.
+     * @param isMaximizing  Indicates whether it's the turn of the maximizing player.
+     * @return The value of the best move at the given depth.
+     */
+    public float minimax(int root, boolean isMaximizing) {
+        // Check for terminal states
+        if (checkForWin("O") == 1) {
+            return 1; // Computer wins
+        } else if (checkForWin("X") == 1) {
+            return -1; // Human wins
+        } else if (checkForWin("O") == 2) {
+            return 0; // Draw
+        }
+
+        // Recursive minimax algorithm
+        if (isMaximizing) {
+            float maxVal = Float.NEGATIVE_INFINITY;
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (board[i][j].equals(" ")) {
+                        // Make a move and evaluate its value
+                        board[i][j] = "O";
+                        float val = minimax(root + 1, false);
+                        maxVal = Math.max(val, maxVal);
+                        // Undo the move after evaluating it
+                        board[i][j] = " ";
+                    }
+                }
+            }
+            return maxVal;
+        } else {
+            float minVal = Float.POSITIVE_INFINITY;
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (board[i][j].equals(" ")) {
+                        // Make a move and evaluate its value
+                        board[i][j] = "X";
+                        float val = minimax(root + 1, true);
+                        minVal = Math.min(val, minVal);
+                        // Undo the move after evaluating it
+                        board[i][j] = " ";
+                    }
+                }
+            }
+            return minVal;
+        }
+    }
+
+
 
     /**
      * Tries to find a winning move for the computer.
@@ -418,7 +523,7 @@ public class gameActivity extends AppCompatActivity {
             // Generate a random number for Easy level or use the specified button for Hard level
             if (gameLevel.equals("Easy")) {
                 number = random.nextInt(9);
-            } else if (gameLevel.equals("Hard")) {
+            } else if (gameLevel.equals("Hard") || gameLevel.equals("Extreme")) {
                 number = buttonHard;
             }
 
