@@ -8,8 +8,8 @@ Welcome to the Android Tic Tac Toe app repository! This mobile application, buil
   
 - **Hard Mode:** The computer opponent is more challenging, strategically choosing moves to win or block the player.
 
-(You will never win!)
-- **Extreme Mode (Minimax Algorithm):** Experience the ultimate challenge with the computer opponent using the __minimax algorithm__, ensuring optimal moves.
+
+- **Extreme Mode (Minimax Algorithm):** Experience the ultimate challenge with the computer opponent using the __minimax algorithm__, ensuring optimal moves. (You will never win!)
 
 - **Background Music:** Immerse yourself in the gaming experience with accompanying background music.
 
